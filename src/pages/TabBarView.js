@@ -1,7 +1,7 @@
 /*
  * @Date: 2019-05-22 17:43:51
  * @LastEditors: Tian
- * @LastEditTime: 2019-05-28 18:40:33
+ * @LastEditTime: 2019-05-30 11:56:52
  */
 import React, {PureComponent} from 'react'
 import {observer, inject} from 'mobx-react/native'
@@ -48,10 +48,10 @@ export default class TabBarView extends PureComponent{
   }
 
   componentWillMount() {
-    console.log('componentWillMount: ')
-    NetUtils.get('/api/VideoArchive/get-home-page-video', {FK_store_gid: 1030}, null).then(
+    NetUtils.get('/api/VideoArchive/get-home-page-video', {FK_store_gid: 1030}, null)
+    .then(
       data => {
-        console.log('success: ', data)
+        console.warn('success: ', data)
       }
     )
   }
